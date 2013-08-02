@@ -24,6 +24,25 @@ The TagHandler interface callback methods are called in a particular sequence by
 
 How does the Design Importer framework decide which TagHandler should go about handling which html tag? 
 
+Remember that the TagHandlers are plain java objects instantiated by their corresponding TagHandlerFactories. These TagHandlerFactories in turn are the OSGi services which need to define the configuration. Listed below are few examples of the tag.pattern property in out-of-the-box TagHandlers:
+
+1. CanvasComponentTagHandler
+2. 
+```java
+/**
+ * The TagHandlerFactory that rolls out {@link CanvasComponentTagHandler} instances
+ */
+@Service
+@Component(metatype = true)
+@Properties({
+        @Property(name = Constants.SERVICE_RANKING, intValue = 5000, propertyPrivate = false),
+        @Property(name = TagHandlerFactory.PN_TAGPATTERN, value = CanvasComponentTagHandlerFactory.TAG_PATTERN)
+})
+public class CanvasComponentTagHandlerFactory implements TagHandlerFactory {
+}
+```
+
+
 ## Content Aggregation
 
 Each TagHandler is responsible for controlling the lifecycle of its nested TagHandlers. Once a TagHandler starts handling an html element, it must also handle all the nested html elements. The nested elements could well map to other TagHandlers. It's the responsibility of the TagHandler to instantiate, destroy and control the nested TagHandlers. The Design Importer framework doesn't interfere here.
