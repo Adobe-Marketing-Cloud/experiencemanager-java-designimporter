@@ -6,7 +6,7 @@ A primary solution provided by the Design Importer is that of transforming the i
 
 The TagHandler is responsible for handling an HTML element, and all the HTML elements nested therein. The TagHandler receives SAX events corresponding to the HTML tags as and when they are encountered while parsing the HTML document. The output of the TagHandler could be markup, meta, script, includes, cq components or a mix of any of those. The below diagram illustrates how HTML snippets are tranformed TagHandlers into desired output content.
 
-![image](raw/diagrams/wiki/images/taghandlerintro.png)
+![image](/apathela/designimporter-sdk/raw/diagrams/wiki/images/taghandlerintro.png)
 
 TagHandlers are POJOs instantiated everytime a tag needs to be handled. Each TagHandler has an associated TagHandlerFactory which is responsible for rolling out TagHandler instances.
 
@@ -29,7 +29,7 @@ The Design Importer framework controls when and how the callback methods of indi
 
 The below diagram illustrates the delegation chain of the existing TagHandlers.
 
-![image](raw/diagrams/wiki/images/taghandlerdelegation.png)
+![image](/apathela/designimporter-sdk/raw/diagrams/wiki/images/taghandlerdelegation.png)
 
 ### Resolution
 
