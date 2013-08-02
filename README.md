@@ -94,6 +94,8 @@ public class ImgTagHandlerFactory implements TagHandlerFactory {
 }
 ```
 
+> **Note:** Since regular expressions could be overlapping, it's possible that multiple TagHandler qualify for a particular tag. In case of such conflicts, the TagHandler with the highest ranking value, as denoted by the OSGi property *SERVICE_RANKING*, is the one picked.
+
 ### Content Aggregation
 
 Each TagHandler is responsible for controlling the lifecycle of its nested TagHandlers. Once a TagHandler starts handling an html element, it must also handle all the nested html elements. The nested elements could well map to other TagHandlers. It's the responsibility of the TagHandler to instantiate, destroy and control the nested TagHandlers. The Design Importer framework doesn't interfere here.
