@@ -2,7 +2,13 @@
 
 ## Introduction
 
-TagHandler is the piece responsible for handling an HTML element, and all the HTML elements nested therein. The TagHandler receives SAX events corresponding to the HTML tags as and when they are encountered while parsing the HTML document. The TagHandlers are POJOs instantiated everytime a tag is handled. Each TagHandler has an associated TagHandlerFactory which is responsible for rolling out instances.
+A primary solution provided by the Design Importer is that of transforming the input HTML into a top-level generated canvas component and a set of CQ components contained therein. 
+
+TagHandler is responsible for handling an HTML element, and all the HTML elements nested therein. The TagHandler receives SAX events corresponding to the HTML tags as and when they are encountered while parsing the HTML document. 
+
+![image](wiki/images/taghandlerintro.png)
+
+TagHandlers are POJOs instantiated everytime a tag is handled. Each TagHandler has an associated TagHandlerFactory which is responsible for rolling out instances.
 
 TagHandlerFactories reside as OSGi services and are responsible for:
 
