@@ -1,4 +1,6 @@
-experiencemanager-java-designimporter
+Experience Manager SDK for Design Importer
 =====================================
 
-SDK for Adobe Experience Manager (Adobe CQ) to extend the Design Importer. It shows how to implement a TagHandler to map HTML elements to components during import.
+SDK for Adobe Experience Manager (Adobe CQ) to extend the Design Importer.
+
+Implementation will be posted here once ready.
