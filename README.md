@@ -38,7 +38,7 @@ Each TagHandler declares the kind of tag it can handle via the tag.pattern OSGi 
 
 Remember that the TagHandlers are plain java objects instantiated by their corresponding TagHandlerFactories. These TagHandlerFactories in turn are the OSGi services which need to define the configuration. Listed below are few examples of the tag.pattern property in out-of-the-box TagHandlerFactories:
 
-1. **CanvasComponentTagHandlerFactory**    
+**CanvasComponentTagHandlerFactory**
 
 ```java
 /**
@@ -55,8 +55,9 @@ public class CanvasComponentTagHandlerFactory implements TagHandlerFactory {
 	static public final String TAG_PATTERN = "<div .*(?=id=\"(?i)cqcanvas\").*>";
 
 }
-```    
-2. **TextComponentTagHandler**    
+```
+
+**TextComponentTagHandler**    
 
 ```java
 /**
@@ -74,7 +75,8 @@ public class TextComponentTagHandlerFactory implements TagHandlerFactory {
 
 }
 ```    
-3. **ImgTagHandler**    
+
+**ImgTagHandler**    
 
 ```java
 /**
