@@ -38,7 +38,7 @@ Each TagHandler declares the kind of tag it can handle via the tag.pattern OSGi 
 
 Remember that the TagHandlers are plain java objects instantiated by their corresponding TagHandlerFactories. These TagHandlerFactories in turn are the OSGi services which need to define the configuration. Listed below are few examples of the tag.pattern property in out-of-the-box TagHandlerFactories:
 
-1. CanvasComponentTagHandlerFactory
+1. **CanvasComponentTagHandlerFactory**    
 
 ```java
 /**
@@ -51,10 +51,12 @@ Remember that the TagHandlers are plain java objects instantiated by their corre
         @Property(name = TagHandlerFactory.PN_TAGPATTERN, value = CanvasComponentTagHandlerFactory.TAG_PATTERN)
 })
 public class CanvasComponentTagHandlerFactory implements TagHandlerFactory {
-}
-```
 
-2. TextComponentTagHandler
+	static public final String TAG_PATTERN = "<div .*(?=id=\"(?i)cqcanvas\").*>";
+
+}
+```    
+2. **TextComponentTagHandler**    
 
 ```java
 /**
@@ -67,10 +69,12 @@ public class CanvasComponentTagHandlerFactory implements TagHandlerFactory {
         @Property(name = TagHandlerFactory.PN_TAGPATTERN, value = TextComponentTagHandlerFactory.TAG_PATTERN)
 })
 public class TextComponentTagHandlerFactory implements TagHandlerFactory {
-}
-```
 
-3. ImgTagHandler    
+	static public final String TAG_PATTERN = "<(p|span|div)\\s+.*data-cq-component=\"(?i)text\".*?>";
+
+}
+```    
+3. **ImgTagHandler**    
 
 ```java
 /**
@@ -84,6 +88,9 @@ public class TextComponentTagHandlerFactory implements TagHandlerFactory {
         @Property(name = "service.factoryPid", value = "com.day.cq.wcm.designimporter.api.TagHandler")
 })
 public class ImgTagHandlerFactory implements TagHandlerFactory {
+
+	static public final String TAG_PATTERN = "<img(?!.* data-cq-component=\"(?i)image\").*>";
+
 }
 ```
 
