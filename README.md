@@ -86,6 +86,7 @@ public class TextComponentTagHandlerFactory implements TagHandlerFactory {
 public class ImgTagHandlerFactory implements TagHandlerFactory {
 }
 ```
+
 ### Content Aggregation
 
 Each TagHandler is responsible for controlling the lifecycle of its nested TagHandlers. Once a TagHandler starts handling an html element, it must also handle all the nested html elements. The nested elements could well map to other TagHandlers. It's the responsibility of the TagHandler to instantiate, destroy and control the nested TagHandlers. The Design Importer framework doesn't interfere here.
