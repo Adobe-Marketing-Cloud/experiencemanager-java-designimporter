@@ -151,7 +151,7 @@ It's important to understand the type of content the TagHandlers emit. The below
 
 </table>
 
-** Note: ** Your TagHandler must implement the HTMLContentProvider interface if it emits any html content. Typically, most TagHandlers emit some content.
+**Note:** Your TagHandler must implement the HTMLContentProvider interface if it emits any html content. Typically, most TagHandlers emit some content.
 
 ComponentTagHandlers, in addition to the html content, also emit in-core cq components that are later persisted to the jcr repository. The TagHandlers that implement the PageComponentProvider are automatically called back for the components they've generated at the end of their handling.
 
