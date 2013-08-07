@@ -1,5 +1,12 @@
 # Tag Handlers
 
+> **Prerequisites**   
+> This page is aimed at helping you write your own TagHandlers and does not covers the breadths of Design Importer. To gain a comprehensive insight into the Design Importer functionality, it's essential to go through the documentation links below:     
+>    
+> http://dev.day.com/docs/en/cq/current/wcm/campaigns/landingpages.html   
+> http://dev.day.com/docs/en/cq/current/wcm/campaigns/landingpages/extending-and-configuring-the-design-importer.html
+
+
 ## Introduction
 
 A primary solution provided by the Design Importer is that of transforming the input HTML into a top-level generated canvas component and a set of CQ components contained therein. 
@@ -150,9 +157,10 @@ ComponentTagHandlers, in addition to the html content, also emit in-core cq comp
 
 ## Writing your own TagHandler
 
-Writing TagHandler should be fairly easy once you understand the architecture as described above. Enlisted below are the cookbook steps you'll need to follow, in order to write your own TagHandlers:
+Writing TagHandler should be fairly easy once you understand the architecture described above. Enlisted below are the cookbook steps you'll need to follow, in order to write your own TagHandlers:
 
 - Define your TagHandler implementation class.
+	- The TagHandler has to be designed keeping in mind the HTML fragment it shall handle.
 - Define your TagHandler factory
 - Create and deploy bundle
 
