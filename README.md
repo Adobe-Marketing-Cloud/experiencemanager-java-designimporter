@@ -163,9 +163,23 @@ Writing TagHandler should be fairly easy once you understand the architecture de
 
 - Define your TagHandler implementation class.
 	- The TagHandler has to be designed keeping in mind the HTML fragment it shall handle.
+	- Since the HTML fragment you're handling could contain nested tags, you'll need to handle them as well. The easiest way, is to simply extend from the [AbstractTagHandler](https://dev.day.com/docs/en/cq/current/javadoc/com/day/cq/wcm/designimporter/parser/taghandlers/AbstractTagHandler.html) class. There would be very few cases you wouldn't want to extend from AbstractTagHandler.
+	- Implement/Override the beginHandling() method for any intialization activities
+	- Implement/Override the endHandling() method for finalizing. This is where you should typically update the AbstractTagHandler buffers viz. *metadata*, *htmlBuffer*, *scriptBuffer*, *referencedScripts*, *pageComponents*
 - Define your TagHandler factory
+	- Make sure your TagHandlerFactory is a valid OSGi service that implements the design importer TagHandlerFactory service interface
+	- Define the property OSGi TagHandlerFactory.PN_TAGPATTERN to be the regular expression that matches the HTML tag you intend to handle
+	- Implement the create() method to instantiate and return your tag handler.
+	- Use the @Reference annotation to have existing OSGi services injected. You may pass these service instances to your taghandlers when you instantiate them within the create() method.
+	- You could also expose more OSGi configuration properties via the @Property or @Properties annotations and use them to configure the behaviour of your TagHandlers.
 - Create and deploy bundle
 
 Caveats:
+
 - In case of conflicts, servce.ranking comes into picture
-- Ensure that the regex is as intended
+- Ensure that the tag pattern regex is as intended
+
+## Inside the SDK
+
+The SDK contains a starter maven project built by following steps mentioned at http://dev.day.com/docs/en/cq/aem-how-tos/development/how-to-build-aem-projects-using-apache-maven.html
+
