@@ -1,3 +1,5 @@
+[Link](#resolution)
+
 # Tag Handlers
 
 > **Prerequisites**   
@@ -40,8 +42,8 @@ The below diagram illustrates the delegation chain of the existing TagHandlers.
 
 ### Resolution
 
-*How does the Design Importer framework decide which TagHandler should go about handling which html tag?*   
-Each TagHandler declares the kind of tag it can handle via the tag.pattern OSGi property. This OSGi property stores the regular expression that needs be to matched against an HTML tag to determine if the TagHandler can handle the tag. Having the pattern stored as a configurable OSGi property has the clear advantage of ease with which the parsing logic could be configured.
+**Question**: *How does the Design Importer framework decide which TagHandler should go about handling which html tag?*   
+**Answer:** Each TagHandler declares the kind of tag it can handle via the tag.pattern OSGi property. This OSGi property stores the regular expression that needs be to matched against an HTML tag to determine if the TagHandler can handle the tag. Having the pattern stored as a configurable OSGi property has the clear advantage of ease with which the parsing logic could be configured.
 
 Remember that the TagHandlers are plain java objects instantiated by their corresponding TagHandlerFactories. These TagHandlerFactories in turn are the OSGi services which need to define the configuration. Listed below are few examples of the tag.pattern property in out-of-the-box TagHandlerFactories:
 
