@@ -6,7 +6,7 @@
 > http://dev.day.com/docs/en/cq/current/wcm/campaigns/landingpages.html   
 > http://dev.day.com/docs/en/cq/current/wcm/campaigns/landingpages/extending-and-configuring-the-design-importer.html
 
-[Introduction](#resolution)    
+[Introduction](#introduction)    
 [Lifecycle](#lifecycle)    
 &nbsp;&nbsp;&nbsp;&nbsp;[Resolution](#resolution)    
 &nbsp;&nbsp;&nbsp;&nbsp;[Content Aggregation](#content-aggregation)    
@@ -188,8 +188,11 @@ Caveats:
 
 The SDK contains a starter maven project built by following steps mentioned at http://dev.day.com/docs/en/cq/aem-how-tos/development/how-to-build-aem-projects-using-apache-maven.html
 
+> The maven project created by following the steps as described in the above link also contains a folder named 'content'. But since the output of this sdk is just a bundle that contains the TagHandler service implementation, the content folder has been excluded from this sdk.
+
 ## Useful Links
 
 - http://dev.day.com/docs/en/cq/current/wcm/campaigns/landingpages.html   
 - http://dev.day.com/docs/en/cq/current/wcm/campaigns/landingpages/extending-and-configuring-the-design-importer.html
 - https://dev.day.com/docs/en/cq/current/javadoc/com/day/cq/wcm/designimporter/parser/taghandlers
+- http://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html
