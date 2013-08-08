@@ -1,5 +1,3 @@
-[Link](#resolution)
-
 # Tag Handlers
 
 > **Prerequisites**   
@@ -8,6 +6,13 @@
 > http://dev.day.com/docs/en/cq/current/wcm/campaigns/landingpages.html   
 > http://dev.day.com/docs/en/cq/current/wcm/campaigns/landingpages/extending-and-configuring-the-design-importer.html
 
+[Introduction](#resolution)    
+[Lifecycle](#lifecycle)    
+&nbsp;&nbsp;&nbsp;&nbsp;[Resolution](#resolution)    
+&nbsp;&nbsp;&nbsp;&nbsp;[Content Aggregation](#content-aggregation)    
+[Writing your own TagHandler](#writing-your-own-taghandler)    
+[Inside the SDK](#inside-the-sdk)
+[Useful Links](#useful-links)
 
 ## Introduction
 
@@ -183,3 +188,8 @@ Caveats:
 
 The SDK contains a starter maven project built by following steps mentioned at http://dev.day.com/docs/en/cq/aem-how-tos/development/how-to-build-aem-projects-using-apache-maven.html
 
+## Useful Links
+
+- http://dev.day.com/docs/en/cq/current/wcm/campaigns/landingpages.html   
+- http://dev.day.com/docs/en/cq/current/wcm/campaigns/landingpages/extending-and-configuring-the-design-importer.html
+- https://dev.day.com/docs/en/cq/current/javadoc/com/day/cq/wcm/designimporter/parser/taghandlers
