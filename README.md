@@ -208,7 +208,7 @@ The supplied example implementation is that of a plain text component tag handle
 The following files comprise the example implementaion:
 
 - [bundle/src/main/java/com/mycompany/myproject/example/PlainTextComponentTagHandler.java](https://git.corp.adobe.com/apathela/designimporter-sdk/blob/master/bundle/src/main/java/com/mycompany/myproject/example/PlainTextComponentTagHandler.java)
-- bundle/src/main/java/com/mycompany/myproject/example/PlainTextComponentTagHandlerFactory.java(https://git.corp.adobe.com/apathela/designimporter-sdk/blob/master/bundle/src/main/java/com/mycompany/myproject/example/PlainTextComponentTagHandlerFactory.java)
+- [bundle/src/main/java/com/mycompany/myproject/example/PlainTextComponentTagHandlerFactory.java](https://git.corp.adobe.com/apathela/designimporter-sdk/blob/master/bundle/src/main/java/com/mycompany/myproject/example/PlainTextComponentTagHandlerFactory.java)
 
 For more help, please refer to the code comments within the source files.
 
