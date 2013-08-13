@@ -184,7 +184,7 @@ Writing TagHandler should be fairly easy once you understand the architecture de
 	- Use the @Reference annotation to have existing OSGi services injected. You may pass these service instances to your taghandlers when you instantiate them within the create() method.
 	- You could also expose more OSGi configuration properties via the @Property or @Properties annotations and use them to configure the behaviour of your TagHandlers.
 - Build and deploy
-	- With the provided mvn project, simply execute the command:    
+	- With the provided maven project, simply execute the following command at the top level:    
 	```mvn -PautoInstallPackage clean install```
 	- The above command shall build, run unit tests, and deploy your code into the cq instace running at localhost.
 
