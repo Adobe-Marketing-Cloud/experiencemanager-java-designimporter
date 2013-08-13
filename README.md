@@ -12,8 +12,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;[Content Aggregation](#content-aggregation)    
 [Writing your own TagHandler](#writing-your-own-taghandler)    
 [Inside the SDK](#inside-the-sdk)    
-&nbsp;&nbsp;&nbsp;&nbsp;[TagHandler Boilerplate](#tagHandler-boilerplate)    
-&nbsp;&nbsp;&nbsp;&nbsp;[TagHandler Example](#tagHandler-example)    
+&nbsp;&nbsp;&nbsp;&nbsp;[TagHandler Boilerplate](#taghandler-boilerplate)    
+&nbsp;&nbsp;&nbsp;&nbsp;[TagHandler Example](#taghandler-example)    
 [Useful Links](#useful-links)
 
 ## Introduction
@@ -194,7 +194,7 @@ This SDK comprises a boilerplate tag handler implementaion which can be used to 
 
 The following files comprise the boilerplate:
 
-- bundle/src/main/java/com/mycompany/myproject/MyTagHandler.java
+- [bundle/src/main/java/com/mycompany/myproject/MyTagHandler.java]([bundle/src/main/java/com/mycompany/myproject/MyTagHandler.java])
 - bundle/src/main/java/com/mycompany/myproject/MyTagHandlerFactory.java
 
 Commonly used methods are stubbed out for you to fill in. Please follow the code comments for further help.
