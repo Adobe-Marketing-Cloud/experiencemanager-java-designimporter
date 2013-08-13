@@ -6,6 +6,10 @@
 > http://dev.day.com/docs/en/cq/current/wcm/campaigns/landingpages.html   
 > http://dev.day.com/docs/en/cq/current/wcm/campaigns/landingpages/extending-and-configuring-the-design-importer.html
 
+<hr>
+
+## Table of Contents
+
 [Introduction](#introduction)    
 [Lifecycle](#lifecycle)    
 &nbsp;&nbsp;&nbsp;&nbsp;[Resolution](#resolution)    
