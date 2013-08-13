@@ -194,8 +194,8 @@ This SDK comprises a boilerplate tag handler implementaion which can be used to 
 
 The following files comprise the boilerplate:
 
-- [bundle/src/main/java/com/mycompany/myproject/MyTagHandler.java]([bundle/src/main/java/com/mycompany/myproject/MyTagHandler.java])
-- bundle/src/main/java/com/mycompany/myproject/MyTagHandlerFactory.java
+- [bundle/src/main/java/com/mycompany/myproject/MyTagHandler.java](https://git.corp.adobe.com/apathela/designimporter-sdk/blob/master/bundle/src/main/java/com/mycompany/myproject/MyTagHandler.java)
+- [bundle/src/main/java/com/mycompany/myproject/MyTagHandlerFactory.java](https://git.corp.adobe.com/apathela/designimporter-sdk/blob/master/bundle/src/main/java/com/mycompany/myproject/MyTagHandlerFactory.java)
 
 Commonly used methods are stubbed out for you to fill in. Please follow the code comments for further help.
 
@@ -207,8 +207,8 @@ The supplied example implementation is that of a plain text component tag handle
 
 The following files comprise the example implementaion:
 
-- bundle/src/main/java/com/mycompany/myproject/example/PlainTextComponentTagHandler.java
-- bundle/src/main/java/com/mycompany/myproject/example/PlainTextComponentTagHandlerFactory.java
+- [bundle/src/main/java/com/mycompany/myproject/example/PlainTextComponentTagHandler.java](https://git.corp.adobe.com/apathela/designimporter-sdk/blob/master/bundle/src/main/java/com/mycompany/myproject/example/PlainTextComponentTagHandler.java)
+- bundle/src/main/java/com/mycompany/myproject/example/PlainTextComponentTagHandlerFactory.java(https://git.corp.adobe.com/apathela/designimporter-sdk/blob/master/bundle/src/main/java/com/mycompany/myproject/example/PlainTextComponentTagHandlerFactory.java)
 
 For more help, please refer to the code comments within the source files.
 
