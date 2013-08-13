@@ -2,11 +2,8 @@ package com.mycompany.myproject.example;
 
 import com.day.cq.dam.indd.PageComponent;
 import com.day.cq.wcm.designimporter.DesignImportException;
-import com.day.cq.wcm.designimporter.ErrorCodes;
-import com.day.cq.wcm.designimporter.UnsupportedTagContentException;
 import com.day.cq.wcm.designimporter.parser.HTMLContentType;
 import com.day.cq.wcm.designimporter.parser.taghandlers.AbstractTagHandler;
-import com.day.cq.wcm.designimporter.parser.taghandlers.DefaultTagHandler;
 import com.day.cq.wcm.designimporter.util.TagUtils;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.api.wrappers.ValueMapDecorator;
@@ -47,6 +44,8 @@ public class PlainTextComponentTagHandler extends AbstractTagHandler {
 
     private String resourceType;
 
+    private String suffix;
+
     @Override
     public void startElement(String uri, String localName, String qName, Attributes atts) throws DesignImportException {
         // By overriding the super.startElement() and super.endElement methods, we've made sure that the html tags shall be ignored.
@@ -64,6 +63,9 @@ public class PlainTextComponentTagHandler extends AbstractTagHandler {
         Map<String, Object> base = new HashMap<String, Object>();
         base.put("text", htmlBuffer.toString());
         ValueMap properties = new ValueMapDecorator(base);
+
+        // Obtain a unique suffix from the suffix generator utility
+        suffix = designImporterContext.componentSuffixGenerator.getSuffix("text");
 
         // Use the PageComponent API to create the in-memory cq component.
         PageComponent textComponent = pageBuilder.createComponent(resourceType, properties, getNameHint());
@@ -107,7 +109,7 @@ public class PlainTextComponentTagHandler extends AbstractTagHandler {
     }
 
     private String getNameHint() {
-        return "text";
+        return "text" + suffix;
     }
 
 }
