@@ -11,7 +11,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;[Resolution](#resolution)    
 &nbsp;&nbsp;&nbsp;&nbsp;[Content Aggregation](#content-aggregation)    
 [Writing your own TagHandler](#writing-your-own-taghandler)    
-[Inside the SDK](#inside-the-sdk)
+[Inside the SDK](#inside-the-sdk)    
+&nbsp;&nbsp;&nbsp;&nbsp;[TagHandler Boilerplate](#tagHandler-boilerplate)    
+&nbsp;&nbsp;&nbsp;&nbsp;[TagHandler Example](#tagHandler-example)    
 [Useful Links](#useful-links)
 
 ## Introduction
@@ -177,18 +179,38 @@ Writing TagHandler should be fairly easy once you understand the architecture de
 	- Implement the create() method to instantiate and return your tag handler.
 	- Use the @Reference annotation to have existing OSGi services injected. You may pass these service instances to your taghandlers when you instantiate them within the create() method.
 	- You could also expose more OSGi configuration properties via the @Property or @Properties annotations and use them to configure the behaviour of your TagHandlers.
-- Create and deploy bundle
-
-Caveats:
-
-- In case of conflicts, servce.ranking comes into picture
-- Ensure that the tag pattern regex is as intended
+- Build and deploy
+	- With the provided mvn project, simply execute the command:    
+	```mvn -PautoInstallPackage clean install```
+	- The above command shall build, run unit tests, and deploy your code into the cq instace running at localhost.
 
 ## Inside the SDK
 
 The SDK contains a starter maven project built by following steps mentioned at http://dev.day.com/docs/en/cq/aem-how-tos/development/how-to-build-aem-projects-using-apache-maven.html
 
-> The maven project created by following the steps as described in the above link also contains a folder named 'content'. But since the output of this sdk is just a bundle that contains the TagHandler service implementation, the content folder has been excluded from this sdk.
+This SDK comprises a boilerplate tag handler implementaion which can be used to quickly build your custom tag handlers. In addition, the SDK comes with an example implementation that could be used for reference. Both the boilerplate and the example are detailed below:
+
+### TagHandler Boilerplate
+
+The following files comprise the boilerplate:
+
+- bundle/src/main/java/com/mycompany/myproject/MyTagHandler.java
+- bundle/src/main/java/com/mycompany/myproject/MyTagHandlerFactory.java
+
+Commonly used methods are stubbed out for you to fill in. Please follow the code comments for further help.
+
+### TagHandler Example
+
+An example tag handler implementation is provided to help you better understand how to write custom tag handlers.
+
+The supplied example implementation is that of a plain text component tag handler. It transforms an html section into plain text, by simply stripping off all the nested html tags, before storing it as the text property of the foundation text component.
+
+The following files comprise the example implementaion:
+
+- bundle/src/main/java/com/mycompany/myproject/example/PlainTextComponentTagHandler.java
+- bundle/src/main/java/com/mycompany/myproject/example/PlainTextComponentTagHandlerFactory.java
+
+For more help, please refer to the code comments within the source files.
 
 ## Useful Links
 
